@@ -16,7 +16,7 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    npm install -g yarn
-    yarn install
-    yarn build
+    sudo apt-get install build-essential
+    make install
+    make build
   displayName: 'yarn install and build'
