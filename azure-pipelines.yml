@@ -12,10 +12,11 @@ pool:
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '10.x'
+    versionSpec: '13.x'
   displayName: 'Install Node.js'
 
 - script: |
-    make install
-    make build
-  displayName: 'npm install and build'
+    npm install -g yarn
+    yarn install
+    yarn build
+  displayName: 'yarn install and build'
